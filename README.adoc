@@ -1,0 +1,22 @@
+= Meepress, Wordpress on Meecrowave
+
+Meepress runs Wordpress (5) on Apache link:http://openwebbeans.apache.org/meecrowave/[Meecrowave]
+thanks to Resin link:http://quercus.caucho.com/[Quercus] PHP interpreter.
+
+== How to build
+
+[source,sh]
+----
+mvn clean install
+----
+
+== How to run
+
+Unzip `target/meepress-meecrowave-distribution.zip` and run `bin/meecrowave.sh run`
+which is in the `bin` folder of the unzipped folder.
+
+== Configuration
+
+The system property `meepress.filter.redirectedOnIndex` enables to pass
+a comma separated value which will force the usage of `index.php` to serve the page.
+It is useful when the pattern used for permalinks is not using query parameters (i.e. it uses slugs).
