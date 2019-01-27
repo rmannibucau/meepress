@@ -20,3 +20,8 @@ which is in the `bin` folder of the unzipped folder.
 The system property `meepress.filter.redirectedOnIndex` enables to pass
 a comma separated value which will force the usage of `index.php` to serve the page.
 It is useful when the pattern used for permalinks is not using query parameters (i.e. it uses slugs).
+
+== Install a plugin
+
+Upload feature is not yet functional so you need to download your plugins
+and unzip them in wordpress `wp-content/plugins`.

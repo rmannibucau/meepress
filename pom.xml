@@ -110,6 +110,9 @@
         <configuration>
           <fakeTomcatScripts>true</fakeTomcatScripts>
           <webapp>${project.build.directory}/wordpress</webapp>
+          <systemProperties>
+            <meepress.filter.redirectedOnIndex>@default@,/javaee/,/big-data/,/frontend/,/other/,/uncategorized/,/category/,/comments/,/feed,/20</meepress.filter.redirectedOnIndex>
+          </systemProperties>
         </configuration>
       </plugin>
     </plugins>

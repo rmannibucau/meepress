@@ -27,7 +27,7 @@ public class Wordpress extends QuercusServlet {
         Locale.setDefault(Locale.ENGLISH); // otherwise json encoding fails when numbers use a comma and not a dot
 
         // todo: config within the context (init params etc) - com.caucho.quercus.servlet.QuercusServlet.setInitParam
-
+        // todo: setDatasource to support h2?
         super.init(config);
 
         // for tomcat like system ensure it uses the right work folder

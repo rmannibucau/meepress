@@ -28,10 +28,11 @@ public class WordpressFilter implements Filter {
 
     @Override
     public void init(final FilterConfig filterConfig) {
-        redirectedOnIndex = Stream.of(System.getProperty("meepress.filter.redirectedOnIndex", "").split(","))
+        redirectedOnIndex = Stream.of(System.getProperty("meepress.filter.redirectedOnIndex", "@default@").replace("@default@", "/wp-json,/page").split(","))
                 .map(String::trim)
                 .filter(it -> !it.isEmpty())
                 .collect(toList());
+        filterConfig.getServletContext().log("Setup php redirections for " + redirectedOnIndex + " prefixes");
     }
 
     @Override
