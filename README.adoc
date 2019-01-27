@@ -25,3 +25,10 @@ It is useful when the pattern used for permalinks is not using query parameters 
 
 Upload feature is not yet functional so you need to download your plugins
 and unzip them in wordpress `wp-content/plugins`.
+
+== Cron
+
+Wordpress cron only works when the website has enough traffic cause it is triggered
+when the website is loaded (when there is a visitor).
+
+You can set in your `wp-config.php` `define('DISABLE_WP_CRON', true);` to disable it.

@@ -112,6 +112,8 @@
           <webapp>${project.build.directory}/wordpress</webapp>
           <systemProperties>
             <meepress.filter.redirectedOnIndex>@default@,/javaee/,/big-data/,/frontend/,/other/,/uncategorized/,/category/,/comments/,/feed,/20</meepress.filter.redirectedOnIndex>
+            <meepress.scheduler.sql>UPDATE meepress_posts SET post_status = 'publish' WHERE post_date &lt; now() AND post_status = 'future'</meepress.scheduler.sql>
+            <meepress.scheduler.delayMs>10000</meepress.scheduler.delayMs>
           </systemProperties>
         </configuration>
       </plugin>
